@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Route:
+  = @route_point.route
+%p
+  %b City:
+  = @route_point.city_id
+%p
+  %b Point type:
+  = @route_point.point_type
+%p
+  %b Point at:
+  = @route_point.point_at
+
+= link_to 'Edit', edit_route_point_path(@route_point)
+\|
+= link_to 'Back', route_points_path

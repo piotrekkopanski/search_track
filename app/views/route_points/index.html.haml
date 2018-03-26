@@ -1,0 +1,27 @@
+%h1 Listing route_points
+
+%table
+  %thead
+    %tr
+      %th Route
+      %th City
+      %th Point type
+      %th Point at
+      %th
+      %th
+      %th
+
+  %tbody
+    - @route_points.each do |route_point|
+      %tr
+        %td= route_point.route
+        %td= route_point.city_id
+        %td= route_point.point_type
+        %td= route_point.point_at
+        %td= link_to 'Show', route_point
+        %td= link_to 'Edit', edit_route_point_path(route_point)
+        %td= link_to 'Destroy', route_point, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Route point', new_route_point_path

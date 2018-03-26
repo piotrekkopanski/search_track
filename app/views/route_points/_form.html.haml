@@ -1,0 +1,12 @@
+-# frozen_string_literal: true
+= simple_form_for(@route_point) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :route
+    = f.input :city_id
+    = f.input :point_type, collection: RoutePoint.point_types.keys, include_blank: true
+    = f.input :point_at, include_blank: true
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @route.name
+%p
+  %b Route type:
+  = @route.route_type
+%p
+  %b Seats:
+  = @route.seats
+
+= link_to 'Edit', edit_route_path(@route)
+\|
+= link_to 'Back', routes_path

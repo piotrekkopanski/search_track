@@ -1,0 +1,11 @@
+-# frozen_string_literal: true
+= simple_form_for(@route) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :route_type, collection: Route.route_types.keys, include_blank: true
+    = f.input :seats
+
+  .form-actions
+    = f.button :submit

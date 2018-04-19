@@ -8,7 +8,7 @@ class Route < ApplicationRecord
   enum route_type: { driver: 0, passenger: 1 }
 
   def to_s
-  	name
+    name
   end
 
 end
